@@ -25,5 +25,11 @@ RUN apt-get clean autoclean \
   && rm -rf ~/.m2 ~/.npm ~/.cache \
   && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
+## The default sh has some issue e.g. with source
+## so explicityly change it to bash as the default
+##
+RUN ls -al /bin/sh \
+	&& rm /bin/sh \
+	&& ln -sf /bin/bash /bin/sh
 
 CMD ["jupyter", "notebook"]

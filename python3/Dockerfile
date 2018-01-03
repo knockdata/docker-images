@@ -10,12 +10,12 @@ RUN echo "LC_ALL=\"en_US.UTF-8\"" >> /etc/default/locale
 
 ENV ANACONDA_VERSION 5.0.1
 
-RUN curl -o ~/anaconda2.sh https://repo.continuum.io/archive/Anaconda2-${ANACONDA_VERSION}-Linux-x86_64.sh
+RUN curl -o ~/anaconda3.sh https://repo.continuum.io/archive/Anaconda3-${ANACONDA_VERSION}-Linux-x86_64.sh
 
-RUN /bin/bash ~/anaconda2.sh -b -p /opt/conda2 \
-    && rm ~/anaconda2.sh
+RUN /bin/bash ~/anaconda3.sh -b -p /opt/conda3 \
+    && rm ~/anaconda3.sh
 
-ENV PATH /opt/conda2/bin:$PATH
+ENV PATH /opt/conda3/bin:$PATH
 
 RUN conda install -y tensorflow spacy gensim
 

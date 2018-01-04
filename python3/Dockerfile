@@ -46,6 +46,7 @@ RUN ls -al /bin/sh \
 	&& ln -sf /bin/bash /bin/sh
 
 ADD run.sh /root/run.sh
-RUN chmod +x run.sh
+
+RUN chmod +x /root/run.sh
 
 CMD ["/root/run.sh"]

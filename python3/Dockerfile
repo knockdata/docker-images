@@ -37,6 +37,8 @@ RUN apt-get clean autoclean \
   && rm -rf ~/.m2 ~/.npm ~/.cache \
   && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
+RUN jupyter nbextension install https://bitbucket.org/ipre/calico/downloads/calico-spell-check-1.0.zip \
+  && jupyter nbextension enable calico-spell-check
 
 ## The default sh has some issue e.g. with source
 ## so explicityly change it to bash as the default

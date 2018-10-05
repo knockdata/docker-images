@@ -18,4 +18,4 @@ RUN wget -q http://apache.mirrors.pair.com/spark/spark-${SPARK_VERSION}/spark-${
 	&& rm /tmp/spark-${SPARK_VERSION}-bin-hadoop2.7.tgz
 
 
-ENV SPARK_HOME /opt/spark-${SPARK_VERSION}
+ENV SPARK_HOME /opt/spark-${SPARK_VERSION}-bin-hadoop2.7

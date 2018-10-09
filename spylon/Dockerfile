@@ -1,4 +1,4 @@
-FROM knockdata/python3
+FROM knockdata/python2
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV SCALA_VERSION 2.11
